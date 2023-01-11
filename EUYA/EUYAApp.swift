@@ -1,9 +1,5 @@
-//
-//  EUYAApp.swift
-//  EUYA
-//
-//  Created by Mercen on 2023/01/11.
-//
+/// EUYA App Controller
+/// Created by Mercen on 2023/01/11.
 
 import SwiftUI
 
@@ -11,7 +7,7 @@ import SwiftUI
 struct EUYAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BaseView()
         }
     }
 }

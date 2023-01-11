@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		9325CA00296E901900476F56 /* EUYAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9325C9FF296E901900476F56 /* EUYAApp.swift */; };
-		9325CA02296E901900476F56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9325CA01296E901900476F56 /* ContentView.swift */; };
+		9325CA02296E901900476F56 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9325CA01296E901900476F56 /* BaseView.swift */; };
 		9325CA04296E901A00476F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9325CA03296E901A00476F56 /* Assets.xcassets */; };
 		9325CA07296E901A00476F56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9325CA06296E901A00476F56 /* Preview Assets.xcassets */; };
+		9325CA10296E905B00476F56 /* StableDiffusion in Frameworks */ = {isa = PBXBuildFile; productRef = 9325CA0F296E905B00476F56 /* StableDiffusion */; };
+		9325CA13296E909600476F56 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9325CA12296E909600476F56 /* BaseController.swift */; };
+		9325CA16296E91E400476F56 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9325CA15296E91E400476F56 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9325C9FC296E901900476F56 /* EUYA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EUYA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9325C9FF296E901900476F56 /* EUYAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EUYAApp.swift; sourceTree = "<group>"; };
-		9325CA01296E901900476F56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9325CA01296E901900476F56 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		9325CA03296E901A00476F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9325CA06296E901A00476F56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9325CA08296E901A00476F56 /* EUYA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EUYA.entitlements; sourceTree = "<group>"; };
+		9325CA12296E909600476F56 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		9325CA14296E90F000476F56 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9325CA15296E91E400476F56 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9325CA10296E905B00476F56 /* StableDiffusion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +43,8 @@
 		9325C9F3296E901900476F56 = {
 			isa = PBXGroup;
 			children = (
+				9325CA15296E91E400476F56 /* LICENSE */,
+				9325CA14296E90F000476F56 /* README.md */,
 				9325C9FE296E901900476F56 /* EUYA */,
 				9325C9FD296E901900476F56 /* Products */,
 			);
@@ -53,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				9325C9FF296E901900476F56 /* EUYAApp.swift */,
-				9325CA01296E901900476F56 /* ContentView.swift */,
+				9325CA11296E906C00476F56 /* BaseView */,
 				9325CA03296E901A00476F56 /* Assets.xcassets */,
 				9325CA08296E901A00476F56 /* EUYA.entitlements */,
 				9325CA05296E901A00476F56 /* Preview Content */,
@@ -67,6 +76,15 @@
 				9325CA06296E901A00476F56 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9325CA11296E906C00476F56 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				9325CA01296E901900476F56 /* BaseView.swift */,
+				9325CA12296E909600476F56 /* BaseController.swift */,
+			);
+			path = BaseView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +103,9 @@
 			dependencies = (
 			);
 			name = EUYA;
+			packageProductDependencies = (
+				9325CA0F296E905B00476F56 /* StableDiffusion */,
+			);
 			productName = EUYA;
 			productReference = 9325C9FC296E901900476F56 /* EUYA.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +134,9 @@
 				Base,
 			);
 			mainGroup = 9325C9F3296E901900476F56;
+			packageReferences = (
+				9325CA0E296E905B00476F56 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */,
+			);
 			productRefGroup = 9325C9FD296E901900476F56 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9325CA16296E91E400476F56 /* LICENSE in Resources */,
 				9325CA07296E901A00476F56 /* Preview Assets.xcassets in Resources */,
 				9325CA04296E901A00476F56 /* Assets.xcassets in Resources */,
 			);
@@ -139,7 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9325CA02296E901900476F56 /* ContentView.swift in Sources */,
+				9325CA02296E901900476F56 /* BaseView.swift in Sources */,
+				9325CA13296E909600476F56 /* BaseController.swift in Sources */,
 				9325CA00296E901900476F56 /* EUYAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +300,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = EUYA;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +328,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = EUYA;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9325CA0E296E905B00476F56 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/ml-stable-diffusion";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9325CA0F296E905B00476F56 /* StableDiffusion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9325CA0E296E905B00476F56 /* XCRemoteSwiftPackageReference "ml-stable-diffusion" */;
+			productName = StableDiffusion;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9325C9F4296E901900476F56 /* Project object */;
 }

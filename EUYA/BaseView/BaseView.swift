@@ -1,13 +1,9 @@
-//
-//  ContentView.swift
-//  EUYA
-//
-//  Created by Mercen on 2023/01/11.
-//
+/// Base View
+/// Created by Mercen on 2023/01/11.
 
 import SwiftUI
 
-struct ContentView: View {
+struct BaseView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +15,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct BaseView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        BaseView()
     }
 }
